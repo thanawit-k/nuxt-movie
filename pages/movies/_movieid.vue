@@ -20,11 +20,7 @@
         <p class="movie-fact">
           <span>Released:</span>
           {{
-            new Date(movie.release_date).toLocaleString('en-us', {
-              month: 'long',
-              day: 'numeric',
-              year: 'numeric',
-            })
+            movie.release_date
           }}
         </p>
         <p class="movie-fact">
@@ -33,10 +29,7 @@
         <p class="movie-fact">
           <span>Revenue:</span>
           {{
-            movie.revenue.toLocaleString('en-us', {
-              style: 'currency',
-              currency: 'USD',
-            })
+            movie.revenues
           }}
         </p>
         <p class="movie-fact"><span>Overview:</span> {{ movie.overview }}</p>
